@@ -33,7 +33,7 @@ def get_books(request):
 
 
 def read_books():
-    os.makedirs(path, exist_ok=True)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     try:
         with open(path, 'r', encoding='utf-8') as file:
             return json.load(file)
